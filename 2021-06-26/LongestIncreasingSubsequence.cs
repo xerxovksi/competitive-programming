@@ -72,7 +72,7 @@ namespace Google
             return sub.Count;
         }
 
-        public int LengthOfLIS_UsingLinearSearch(int[] nums)
+        public int LengthOfLIS_UsingBinarySearch(int[] nums)
         {
             if (nums.Length == 1)
             {
