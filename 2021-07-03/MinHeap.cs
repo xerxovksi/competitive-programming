@@ -3,16 +3,16 @@ namespace Google
     using System;
     using System.Collections.Generic;
 
-    public class MaxHeap
+    public class MinHeap
     {
-        private const int Default = int.MinValue;
+        private const int Default = int.MaxValue;
 
         // Heap starts from index = 1.
         private readonly IList<int> heap;
 
         private int last;
 
-        public MaxHeap()
+        public MinHeap()
         {
             heap = new List<int> { Default };
             last = 0;
@@ -81,7 +81,7 @@ namespace Google
             }
 
             int parent = position / 2;
-            if (heap[position] > heap[parent])
+            if (heap[position] < heap[parent])
             {
                 int temp = heap[parent];
                 heap[parent] = heap[position];
@@ -99,7 +99,7 @@ namespace Google
             }
 
             int left = position * 2;
-            if (heap[position] < heap[left])
+            if (heap[position] > heap[left])
             {
                 int temp = heap[position];
                 heap[position] = heap[left];
@@ -109,7 +109,7 @@ namespace Google
             }
 
             int right = position * 2 + 1;
-            if (heap[position] < heap[right])
+            if (heap[position] > heap[right])
             {
                 int temp = heap[position];
                 heap[position] = heap[right];
