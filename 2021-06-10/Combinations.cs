@@ -8,7 +8,7 @@ namespace Google
         public IList<IList<int>> Combine(int n, int k)
         {
             IList<IList<int>> result = new List<IList<int>>();
-            GetCombinations(
+            Combine(
               n,
               k,
               1,
@@ -18,7 +18,7 @@ namespace Google
             return result;
         }
 
-        private IList<IList<int>> Combine(
+        private void Combine(
           int n,
           int k,
           int start,
