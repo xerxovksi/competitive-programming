@@ -18,10 +18,6 @@ namespace Google
 
                 return Merge(lowSort, highSort);
             }
-            else if (low == high)
-            {
-                return new int[] { nums[low] };
-            }
             else
             {
                 return new int[] { nums[high] };
