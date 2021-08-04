@@ -20,6 +20,8 @@ namespace Google
                 return;
             }
 
+            // If no next permutation is found,
+            // then we are required to return the sorted array of nums.
             Array.Sort(nums);
         }
 
