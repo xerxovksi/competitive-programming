@@ -34,8 +34,7 @@ namespace Google
         public List<int> PreOrder(Node root)
         {
             List<int> preOrder = new List<int>();
-            Node current = root;
-            PreOrder(current, preOrder);
+            PreOrder(root, preOrder);
 
             return preOrder;
         }
@@ -51,13 +50,13 @@ namespace Google
             if (val > root.val)
             {
                 root.right = AddNode(root.right, val);
-                return root;
             }
             else
             {
                 root.left = AddNode(root.left, val);
-                return root;
             }
+
+            return root;
         }
 
         private void PreOrder(Node root, List<int> preOrder)

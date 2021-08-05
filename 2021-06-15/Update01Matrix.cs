@@ -4,70 +4,53 @@ namespace Google
 
     public class Solution
     {
-        public int[][] Update01Matrix(int[][] mat)
+        public int[][] UpdateMatrix(int[][] mat)
         {
-            int high = 1000;
-
-            int rows = mat.Length;
-            int cols = mat[0].Length;
-            int[][] result = new int[rows][];
-
-            for (int i = 0; i < rows; i++)
+            if (mat.Length == 0 || mat[0].Length == 0)
             {
-                result[i] = new int[cols];
-                for (int j = 0; j < cols; j++)
-                {
-                    result[i][j] = high;
-                }
+                return mat;
             }
 
-            for (int i = 0; i < rows; i++)
+            int max = mat.Length * mat[0].Length;
+            int[][] distance = new int[mat.Length][];
+
+            for (int i = 0; i < mat.Length; i++)
             {
-                for (int j = 0; j < cols; j++)
+                distance[i] = new int[mat[i].Length];
+                for (int j = 0; j < mat[i].Length; j++)
                 {
                     if (mat[i][j] == 0)
                     {
-                        result[i][j] = 0;
+                        distance[i][j] = 0;
                         continue;
                     }
 
-                    if (i > 0)
-                    {
-                        result[i][j] = Math.Min(
-                            result[i][j],
-                            1 + result[i - 1][j]);
-                    }
+                    int top = i > 0 ? distance[i - 1][j] : max;
+                    int left = j > 0 ? distance[i][j - 1] : max;
 
-                    if (j > 0)
-                    {
-                        result[i][j] = Math.Min(
-                            result[i][j],
-                            1 + result[i][j - 1]);
-                    }
+                    distance[i][j] = Math.Min(top, left) + 1;
                 }
             }
 
-            for (int i = rows - 1; i >= 0; i--)
+            for (int i = mat.Length - 1; i >= 0; i--)
             {
-                for (int j = cols - 1; j >= 0; j--)
+                for (int j = mat[0].Length - 1; j >= 0; j--)
                 {
-                    if (i < rows - 1)
+                    if (mat[i][j] == 0)
                     {
-                        result[i][j] = Math.Min(
-                            result[i][j],
-                            1 + result[i + 1][j]);
+                        distance[i][j] = 0;
+                        continue;
                     }
 
-                    if (j < cols - 1)
-                    {
-                        result[i][j] = Math.Min(
-                            result[i][j],
-                            1 + result[i][j + 1]);
-                    }
+                    int down = i < mat.Length - 1 ? distance[i + 1][j] : max;
+                    int right = j < mat[0].Length - 1 ? distance[i][j + 1] : max;
+                    distance[i][j] = Math.Min(
+                        distance[i][j],
+                        Math.Min(down, right) + 1);
                 }
             }
 
-            return result;
+            return distance;
         }
     }
 }

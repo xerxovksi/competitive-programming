@@ -28,7 +28,7 @@ namespace Google
             return result;
         }
 
-        private void DFS(TreeNode node, int level, IList<int> result)
+        private void RightSideView(TreeNode node, int level, IList<int> result)
         {
             if (node == null)
             {
@@ -40,8 +40,8 @@ namespace Google
                 result.Add(node.val);
             }
 
-            DFS(node.right, level + 1, result);
-            DFS(node.left, level + 1, result);
+            RightSideView(node.right, level + 1, result);
+            RightSideView(node.left, level + 1, result);
         }
     }
 }
