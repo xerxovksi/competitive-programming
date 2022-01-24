@@ -1,4 +1,4 @@
-namespace Google
+namespace Practice
 {
     using System;
 
@@ -32,9 +32,10 @@ namespace Google
                        && dp[i] < 1 + dp[j])
                     {
                         dp[i] = 1 + dp[j];
-                        maximum = Math.Max(maximum, dp[i]);
                     }
                 }
+
+                maximum = Math.Max(maximum, dp[i]);
             }
 
             return maximum;

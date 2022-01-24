@@ -1,4 +1,4 @@
-namespace Google
+namespace Practice
 {
     public class Solution
     {

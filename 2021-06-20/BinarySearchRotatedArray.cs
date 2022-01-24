@@ -1,4 +1,4 @@
-namespace Google
+namespace Practice
 {
     public class Solution
     {
@@ -7,7 +7,7 @@ namespace Google
             int low = 0;
             int high = nums.Length - 1;
 
-            while(low <= high)
+            while (low <= high)
             {
                 int mid = (low + high) / 2;
                 if (target == nums[mid])

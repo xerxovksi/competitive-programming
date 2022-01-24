@@ -1,4 +1,4 @@
-Topics to Cover
+*Syllabus*
 1.	Iteration
 2.	Recursion
 3.	Arrays
@@ -21,14 +21,16 @@ Topics to Cover
 20.	Multiple Pointer
 21.	Sliding Window
 22.	Greedy Algorithms
+23. Segment Trees
+24. Trie
 
-Data Structures and Algorithms Subject References
+*Data Structures and Algorithms Course References*
 1.	CS 61A and 61B at UC Berkeley
 2.	MIT 6006
 
-Guidelines on tackling a coding problem
+*Solving the problem*
 1.	Explain solution in plain English
 2.	Step-by-step breakdown
-3.	Pseudocode
-4.	Functions
-5.	Implement
+3.	Write some pseudocode
+4.	Design the functions
+5.	Actual mplementation
