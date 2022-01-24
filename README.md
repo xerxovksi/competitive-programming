@@ -1,4 +1,5 @@
-*Syllabus*
+# Syllabus
+## Topics
 1.	Iteration
 2.	Recursion
 3.	Arrays
@@ -24,13 +25,13 @@
 23. Segment Trees
 24. Trie
 
-*Data Structures and Algorithms Course References*
+## Course References
 1.	CS 61A and 61B at UC Berkeley
 2.	MIT 6006
 
-*Solving the problem*
+## Solving the Coding Problem
 1.	Explain solution in plain English
 2.	Step-by-step breakdown
 3.	Write some pseudocode
 4.	Design the functions
-5.	Actual mplementation
+5.	Actual implementation
