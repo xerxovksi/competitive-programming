@@ -12,6 +12,11 @@ namespace Practice
     intervals = [[1,3],[2,3]]
     output [1,3,5,6]
     You're incrementing everything from index 1 to index 3 then index 2 to index 3.
+    
+    arr = [2, 4, 6, 8, 10, 12, 14]
+    intervals = [[2, 5], [1, 3], [4, 5]]
+    output [2, 5, 8, 10, 12, 14, 14]
+    You're incrementing everything from index 2 to index 5 then index 1 to index 3 then index 4 to index 5.
     */
 
     public class Solution
